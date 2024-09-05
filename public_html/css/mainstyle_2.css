@@ -1,0 +1,205 @@
+@import 'mainstyle';
+
+.header .search-form {
+    position: absolute;
+    top: 115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+
+}
+
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+    border-radius: 20px;
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem); /* Set height based on screen height */
+    max-height: 525px;
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 2px solid var(--black); /* Add a black border */
+    border-radius: 10px; /* Rounded border */
+}
+
+
+header .cart-items-container #cart-empty-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
+.header .cart-items-container .btn.checkout {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.header .cart-items-container .active p {
+    margin-top: 15rem;
+    color: var(--black);
+}
+
+.header .cart-items-container .active .cart-items p {
+    margin-top: 15rem;
+    color: var(--black);
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center align the text */
+    padding: 1rem; /* Add padding */
+    background-color: rgba(255, 0, 0, 0.1); /* Add a light red background color */
+}
+
+
+.header .cart-items-container.active {
+    right: 0;
+    height: calc(100vh - 9.5rem);
+}
+
+.header .cart-items-container .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 10px; /* Add padding to the cart items container */
+    
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img {
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+/* Style for cart-total */
+#cart-total {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin: 1rem 0; /* Margin for spacing */
+}
+
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/HalfClutch_01.jpeg); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Set a fixed height equal to the viewport height */
+    padding: 100px 0; /* Add padding to the top and bottom */
+    text-align: center; /* Center align the content */
+
+}
+
+.home .img {
+    height: 10rem;
+    overflow: hidden;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 {
+    margin-top: 7.5rem;
+    padding: 2.5rem 7.5%;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content h1 {
+    padding: 2.5rem 7.5%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-text-stroke: 1px var(--main-color); /* Width and color of the outline for WebKit browsers */
+    text-shadow: 1px var(--main-color);
+}
+
+.home .content p {
+    font-size: 2rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    color: #eee;
+}
+
+/* Add to cart button styles */
+.btn.add-to-cart {
+    background-color: var(--main-color); /* Red background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.btn.add-to-cart:hover {
+    background-color: var(--bg); /* Darker red on hover */
+}
