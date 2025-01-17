@@ -68,10 +68,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             // SMTP configuration
             $mail->isSMTP();
-            $mail->Host = 'smtp.hostinger.com'; // Replace with your SMTP host
+            $mail->Host = ''; // Replace with your SMTP host
             $mail->SMTPAuth = true;
-            $mail->Username = 'info@halfclutch.com'; // Replace with your SMTP email
-            $mail->Password = '@7ekQH7TRH3g=b&'; // Replace with your email password
+            $mail->Username = ''; // Replace with your SMTP email
+            $mail->Password = ''; // Replace with your email password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Use PHPMailer::ENCRYPTION_SMTPS for port 465
             $mail->Port = 465;
 
