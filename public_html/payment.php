@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/mainstyle_2.css">
     <link rel="stylesheet" href="css/mainstyle_3.css">
     <link rel="stylesheet" href="css/altstyle.css">
+    <link rel="stylesheet" href="css/altstyle.css">
     <link rel="stylesheet" href="css/checkout.css">
 
     <!-- additional custom css for payment page -->

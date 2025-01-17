@@ -1,6 +1,6 @@
 <?php
     require_once "config.php";
-    require_once 'login_system/includes/login_view.inc.php';
+    require_once 'login/includes/login_view.inc.php';
 
     // Check if user is logged in
     $isLoggedIn = isset($_SESSION['user_id']);
@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/mainstyle_2.css">
     <link rel="stylesheet" href="css/mainstyle_3.css">
     <link rel="stylesheet" href="css/altstyle.css">
+    
 </head>
 <body>
 
@@ -28,12 +29,12 @@
 
 <header class="header">
     <div class="logo-container">
-        <a href="index.php" class="logo">
+        <a href="https://halfclutch.com/" class="logo">
             <img src="images/HalfClutch_Logo.png" alt="">
         </a>
     </div>
     <nav class="navbar">
-        <a href="index.php">Home</a>
+        <a href="https://halfclutch.com/">Home</a>
         <a href="index.php#about">About us</a>
         <a href="index.php#contact">Contact us</a>
         <a href="index.php#reviews">Reviews</a>
@@ -45,8 +46,9 @@
     </nav>
 
     <div class="icons">
-        <div class="fas fa-search" id="search-btn"></div>
+        <!-- <div class="fas fa-search" id="search-btn"></div> -->
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <span class="cart-count"></span>
         <div class="fas fa-bars" id="menu-btn"></div>
         <div class="fas fa-times" id="close-btn"></div>
     </div>
@@ -62,7 +64,7 @@
         </div>
         <p id="cart-empty-message">Cart is empty.</p>
         <p id="cart-total" style="display: none;">Total: R0</p>
-        <a href="<?php echo $isLoggedIn ? 'checkout.php' : 'login_system/login.php'; ?>" class="btn checkout" id="checkout-link" style="display: none;">Proceed to checkout</a>
+        <a href="<?php echo $isLoggedIn ? 'checkout.php' : 'login/login.php'; ?>" class="btn checkout" id="checkout-link" style="display: none;">Proceed to checkout</a>
         <button class="btn checkout" id="clear-cart-btn" style="display: none;">Clear cart</button> 
     </div>
 </header>
@@ -78,10 +80,10 @@
     <div class="box-container">
         <?php
             // Database connection settings
-            $servername = "localhost";
-            $username = "id22343844_lethabodorane";
-            $password = "LethaboMay05.";
-            $dbname = "id22343844_halfclutch";
+            $servername = "154.56.34.9";
+            $username = "u871886705_info";
+            $password = "@7ekQH7TRH3g=b&";
+            $dbname = "u871886705_halfclutch";
 
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
@@ -153,15 +155,20 @@
 
 <!-- drinks section ends here  -->
 
+<button id="back-to-top" class="btn">Back to Top</button>
+
 <footer>
     <div class="socials">
         <h3>Find us on our socials (:</h3>
-        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://web.facebook.com/people/Half-Clutch/61556008367891/" target = "_blank"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.tiktok.com/discover/half-clutch-food-tembisa" target = "_blank"><i class="fab fa-tiktok"></i></a>
         <p>&copy; 2024 Half Clutch. All rights reserved.</p>
+        <p>Website by: Lethabo Dorane.</p>
+        <p></p>
     </div>  
 </footer>
+
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>

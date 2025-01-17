@@ -24,22 +24,22 @@
 <!-- header section starts here -->
 <header class="header">
     <div class="logo-container">
-        <a href="admin_page.php" class="logo">
+        <a href="" class="logo">
             <img src="../images/HalfClutch_Logo.png" alt="">
         </a>
     </div>
     <nav class="navbar">
-        <a href="admin_page.php">Dashboard</a>
-        <a href="drinks.php">Drinks</a>
-        <a href="users.php">Users</a>
-        <a href="orders.php">Orders</a>
-        <a href="employees.php">Employees</a>
+        <!-- <a href="admin_page.php">Dashboard</a> -->
+        <!-- <a href="drinks.php">Drinks</a> -->
+        <!-- <a href="users.php">Users</a> -->
+        <a href="">Orders</a>
+        <!-- <a href="employees.php">Employees</a> -->
     </nav>
 
     <div class="icons">
-        <div class="fas fa-search" id="search-btn"></div>
+        <!-- <div class="fas fa-search" id="search-btn"></div> -->
         <div class="fas fa-bars" id="menu-btn"></div>
-        <div class="fas fa-times" id="close-btn"></div>
+        <!-- <div class="fas fa-times" id="close-btn"></div> -->
     </div>
 
     <div class="search-form">
@@ -69,11 +69,11 @@
 
     <?php
         // Database connection settings
-        $servername = "154.56.34.9";
-        $username = "u871886705_info";
-        $password = "@7ekQH7TRH3g=b&";
-        $dbname = "u871886705_halfclutch";
-        
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "halfclutch";
+
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
 

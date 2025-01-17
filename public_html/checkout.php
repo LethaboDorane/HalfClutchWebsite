@@ -51,10 +51,12 @@
 <footer>
     <div class="socials">
         <h3>Find us on our socials (:</h3>
-        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://web.facebook.com/people/Half-Clutch/61556008367891/" target = "_blank"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.tiktok.com/discover/half-clutch-food-tembisa" target = "_blank"><i class="fab fa-tiktok"></i></a>
         <p>&copy; 2024 Half Clutch. All rights reserved.</p>
+        <p>Website by: Lethabo Dorane.</p>
+        <p></p>
     </div>  
 </footer>
 

@@ -113,11 +113,37 @@ function clearCart() {
 
 function handlePlaceOrder() {
     document.getElementById('checkout-form').addEventListener('submit', function(event) {
+        event.preventDefault();
         const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
         const productIds = cartItems.map(item => item.id).join(',');
         const totalCost = document.getElementById('cart-total').textContent.replace('Total: R', '');
+        const userId = document.getElementById('user-id').value;  // Assuming you have a user ID input
 
-        document.getElementById('total-input').value = totalCost;
-        document.getElementById('cart-items-input').value = productIds;
+        // AJAX request to backend
+        fetch('/api/placeOrder', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user_id: userId,
+                product_ids: productIds,
+                total_amount: totalCost,
+                status: 'pending'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Order placed successfully!');
+                clearCart();
+            } else {
+                alert('Error placing order. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error placing order. Please try again.');
+        });
     });
 }

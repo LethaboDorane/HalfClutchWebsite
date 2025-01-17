@@ -81,11 +81,10 @@
         </tr>
         <?php
             // Database connection settings
-            $servername = "localhost";
-            $username = "id22343844_lethabodorane";
-            $password = "LethaboMay05.";
-            $dbname = "id22343844_halfclutch";
-
+            $servername = "154.56.34.9";
+            $username = "u871886705_info";
+            $password = "@7ekQH7TRH3g=b&";
+            $dbname = "u871886705_halfclutch";
             
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);

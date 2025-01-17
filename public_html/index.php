@@ -1,6 +1,6 @@
 <?php
     require_once "config.php";
-    require_once 'login_system/includes/login_view.inc.php';
+    require_once 'login/includes/login_view.inc.php';
 
     // Check if user is logged in
     $isLoggedIn = isset($_SESSION['user_id']);
@@ -32,7 +32,7 @@
 
 <header class="header">
     <div class="logo-container">
-        <a href="index.php" class="logo">
+        <a href="https://halfclutch.com/" class="logo" title="Half Clutch - Home">
             <img src="images/HalfClutch_Logo.png" alt="">
         </a>
     </div>
@@ -49,8 +49,9 @@
     </nav>
 
     <div class="icons">
-        <div class="fas fa-search" id="search-btn"></div>
+        <!-- <div class="fas fa-search" id="search-btn"></div> -->
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <span class="cart-count"></span>
         <div class="fas fa-bars" id="menu-btn"></div>
         <div class="fas fa-times" id="close-btn"></div>
     </div>
@@ -66,7 +67,7 @@
         </div>
         <p id="cart-empty-message">Cart is empty.</p>
         <p id="cart-total" style="display: none;">Total: R0</p>
-        <a href="<?php echo $isLoggedIn ? 'checkout.php' : 'login_system/login.php'; ?>" class="btn checkout" id="checkout-link" style="display: none;">Proceed to checkout</a> 
+        <a href="<?php echo $isLoggedIn ? 'checkout.php' : 'login/login.php'; ?>" class="btn checkout" id="checkout-link" style="display: none;">Proceed to checkout</a> 
         <button class="btn checkout" id="checkout-link" style="display: none;">Clear cart</button>
     </div>    
 
@@ -82,11 +83,11 @@
         <a href="menu.php" class="btn">Order now</a>
         
         <?php if (isset($_SESSION["user_id"])): ?>
-            <form action="login_system/includes/logout.inc.php" method="post">
+            <form action="login/includes/logout.inc.php" method="post">
                 <button class="btn">Logout</button>
             </form>
         <?php else: ?>
-            <a href="login_system/login.php" class="btn">sign in/sign up</a>
+            <a href="login/login.php" class="btn">sign in/sign up</a>
         <?php endif; ?>
         
     </div>
@@ -103,10 +104,10 @@
     <div class="box-container">
         <?php
             // Database connection settings
-            $servername = "localhost";
-            $username = "id22343844_lethabodorane";
-            $password = "LethaboMay05.";
-            $dbname = "id22343844_halfclutch";
+            $servername = "154.56.34.9";
+            $username = "u871886705_info";
+            $password = "@7ekQH7TRH3g=b&";
+            $dbname = "u871886705_halfclutch";
 
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
@@ -177,7 +178,7 @@
             <h3>Get in touch</h3>
             <div class="info">
                 <span class="fas fa-envelope"></span>
-                <p>Email:<a href="mailto:info@halfclutch.co.za">info@halfclutch.co.za</a></p>
+                <p>Email:<a href="mailto:info@halfclutch.com">info@halfclutch.com</a></p>
             </div>    
             <div class="info">
                 <span class="fas fa-phone"></span>
@@ -205,16 +206,19 @@
 
 <!-- reviews section ends here  -->
 
+<button id="back-to-top" class="btn">Back to Top</button>
+
 <!-- footer starts here  -->
 
 <footer>
     <div class="socials">
         <h3>Find us on our socials (:</h3>
-        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://web.facebook.com/people/Half-Clutch/61556008367891/" target = "_blank"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.tiktok.com/discover/half-clutch-food-tembisa" target = "_blank"><i class="fab fa-tiktok"></i></a>
         <p>&copy; 2024 Half Clutch. All rights reserved.</p>
-        <p>Website by: Lethabo Dorane. </p>
+        <p>Website by: Lethabo Dorane.</p>
+        <p></p>
     </div>  
 </footer>
 

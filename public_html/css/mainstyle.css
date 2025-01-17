@@ -190,3 +190,28 @@ section {
 #close-btn {
     display: none;
 }
+
+/* Back to Top Button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 10px; /* Keeps the button at the bottom */
+    right: 20px; /* Aligns to the right */
+    margin-top: 1rem; /* Adds spacing if applicable */
+    padding: 0.7rem 3rem; /* Adjusts the size of the button */
+    font-size: 1.7rem; /* Sets the font size */
+    color: #fff; /* White text */
+    background: var(--bg); /* Button background color */
+    cursor: pointer; /* Adds pointer cursor on hover */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1000; /* Ensures it stays above other elements */
+    text-align: center; /* Centers text */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+#back-to-top:hover {
+    background: var(--black); /* Changes background to white on hover */
+    color: var(--main-color); /* Text changes to the main color */
+    border: 1px solid var(--main-color); /* Optional border for hover */
+}

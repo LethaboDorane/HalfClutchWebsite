@@ -31,9 +31,9 @@
     </div>
     <nav class="navbar">
         <a href="admin_page.php">Dashboard</a>
+        <a href="drinks.php">Drinks</a>
         <a href="users.php">Users</a>
         <a href="orders.php">Orders</a>
-        <a href="employees.php">Employees</a>
     </nav>
 
     <div class="icons">
@@ -53,8 +53,8 @@
 
 <section class="home" id="home">
     <div class="content">
-        <h3>users page</h3>
-        <h1>view user database</h1>
+        <h3>employees page</h3>
+        <h1>view employees database</h1>
         <?php if (isset($_SESSION["user_id"])): ?>
             <form action="../login_system/includes/logout.inc.php" method="post">
                 <button class="btn">Logout</button>
@@ -67,7 +67,7 @@
 
 <div class="main">
     <h3>This is your admin dashboard where you can manage various aspects of the application.</h3>
-    <h2>User List</h2>
+    <h2>Employee List</h2>
 
     <table style="align-items: center;">
         <tr>
@@ -78,12 +78,11 @@
         </tr>
         <?php
             // Database connection settings
-            $servername = "localhost";
-            $username = "id22343844_lethabodorane";
-            $password = "LethaboMay05.";
-            $dbname = "id22343844_halfclutch";
-
-
+            $servername = "154.56.34.9";
+            $username = "u871886705_info";
+            $password = "@7ekQH7TRH3g=b&";
+            $dbname = "u871886705_halfclutch";
+            
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -108,7 +107,7 @@
                         </tr>";
                 }
             } else {
-                echo "<tr><td colspan='6'>No records found</td></tr>";
+                echo "<tr><td colspan='4'>No records found</td></tr>";
             }
             $conn->close();
         ?>

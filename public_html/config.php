@@ -6,10 +6,11 @@ if (session_status() === PHP_SESSION_NONE) {
 
     session_set_cookie_params([
         'lifetime' => 1800,
-        'domain' => 'localhost',
+        'domain' => 'halfclutch.com',
         'path' => '/',
         'secure' => true,
-        'httponly' => true
+        'httponly' => true,
+        'samesite' => 'None' // allow cookies to be sent with cross-site requests
     ]);
 
     session_start();
@@ -25,19 +26,5 @@ if (!isset($_SESSION['last_regeneration'])) {
         session_regenerate_id(true);
         $_SESSION['last_regeneration'] = time();
     }
-}
-
-# Database connection settings
-$servername = "localhost";
-$username = "id22343844_lethabodorane";         // Update this with your MySQL username
-$password = "LethaboMay05."; // Update this with your MySQL password
-$dbname = "id22343844_halfclutch";     // Update this with your database name
-
-# Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-# Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
 }
 ?>
