@@ -1,0 +1,367 @@
+@import 'mainstyle';
+@import 'mainstyle_2';
+
+.about .row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+    border-radius: 25px
+}
+
+.about .row .image {
+    flex: 1 1 40rem;
+    overflow-x: hidden;
+}
+
+.about .row .image img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu .box-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box {
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: 20px;
+}
+
+.menu .box-container .box img {
+    height: 15rem;
+    border-radius: 10px;
+
+}
+
+.menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.menu .box-container .box .in_stock {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover {
+    background: #fff;
+}
+
+.menu .box-container .box:hover > *{
+    color: var(--black);
+}
+
+.drinks {
+    position: relative;
+}
+
+.drinks .box-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.drinks .box-container .box {
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: 20px;
+}
+
+.drinks .box-container .box img {
+    height: 15rem;
+}
+
+.drinks .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.drinks .box-container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.drinks .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.drinks .box-container .box .in_stock {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+}
+
+.drinks .box-container .box:hover {
+    background: #fff;
+}
+
+.drinks .box-container .box:hover > *{
+    color: var(--black);
+}
+
+.login-container {
+    max-width: 750px; /* Limit login form width */
+    margin: 150px auto 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="submit"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: none;
+}
+
+.login-container input[type="submit"] {
+    background-color: #007bff; /* Blue submit button */
+    color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.login-container a {
+    text-decoration: none;
+    color: #007bff; /* Blue link color */
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.login-container .form-success {
+    text-decoration: none;
+    color: orange;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.login-container a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* a  */
+
+.admin-container {
+    max-width: 750px; /* Limit login form width */
+    margin: 150px auto 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+.admin-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-container input[type="text"],
+.admin-container input[type="password"],
+.admin-container input[type="submit"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: none;
+}
+
+.admin-container input[type="submit"] {
+    background-color: #007bff; /* Blue submit button */
+    color: #fff;
+    cursor: pointer;
+}
+
+.admin-container input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.admin-container a {
+    text-decoration: none;
+    color: #007bff; /* Blue link color */
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.admin-container .form-success {
+    text-decoration: none;
+    color: orange;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.admin-container a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.contact .row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    background: var(--black);
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 25px;
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row .contact-info {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row .contact-info h3 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.contact .row .contact-info p {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.contact .row .contact-info .info {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--bg);
+    border: var(--border);
+}
+
+.contact .row .contact-info .info span {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row .contact-info .info p {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+}
+
+.contact .row .contact-info .info a {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+.reviews {
+    text-align: center;
+}
+
+.reviews h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.reviews p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
