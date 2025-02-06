@@ -1,9 +1,9 @@
 <?php
 // This is the database handler
-$host = "154.56.34.9";
-$dbname = "u871886705_halfclutch";
-$dbusername = "u871886705_info";
-$dbpassword = "@7ekQH7TRH3g=b&";
+$host = "";
+$dbname = "";
+$dbusername = "";
+$dbpassword = "";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername,$dbpassword);
